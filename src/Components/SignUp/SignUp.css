@@ -1,0 +1,139 @@
+
+
+.alreadyaccountline{
+    text-align: right;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.alreadyaccountline span{
+    color: var(--mainyellowcolor);
+    cursor: pointer;
+}
+
+.signupbgdiv{
+    background-image: linear-gradient(#00000079 , #0000008e ) , url('../../Assets/img/maincarbg.svg');
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.mainflexsignupdiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 4rem;
+    padding-block: 2rem;
+}
+
+
+.signcontent{
+    display: flex;
+    background-color: black;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 40%;
+}
+
+
+
+.checkboxandp{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.welcomecontent{
+    width: 60%;
+}
+
+
+.welcomecontent h1{
+    font-size: 4rem;
+    color: #fff;
+}
+
+.welcomecontent p{
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.welcomecontent span{
+    color: var(--mainyellowcolor);
+}
+
+.signcontent h2{
+    color: var(--mainyellowcolor);
+    font-size: 2rem;
+}
+
+.signcontent p{
+    font-size: 1.5rem;
+    color: #9b9999;
+}
+
+.signcontent  input{
+    padding: 1.3rem;
+    border: 1px solid #fff;
+    outline: none;
+    width: 100%;
+    border-radius: 3rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+.checke{
+    width: fit-content !important;
+}
+.signcontent button{
+    background-color: var(--mainyellowcolor);
+    outline: none;
+    padding: 1.4rem;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+
+.googlebtnandtext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100% !important;
+    background-color: white !important;
+}
+
+.signcontent h6{
+    color: var(--mainyellowcolor);
+    font-size: 2rem;
+}
+
+.googlebtnandtext p{
+    color: black;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width:800px) {
+    .welcomecontent{
+        display: none;
+    }
+
+    .signcontent{
+        width: 100%;
+    }
+
+    .signcontent button{
+        padding: 1rem;
+    }
+}
