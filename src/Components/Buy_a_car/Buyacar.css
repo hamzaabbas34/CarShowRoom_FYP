@@ -1,0 +1,94 @@
+
+
+.mainbuyacar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+    background-color: black;
+    height: 90vh;
+    color: #ffff;
+}
+
+
+
+
+.buyacarimg img{
+    width: 550px;
+}
+
+.buyacarcontent{
+    flex: 1;
+}
+
+.buyacarcontent h1{
+    font-size: 3.5rem;
+}
+
+.buyacarcontent p{
+    font-size: 1.6rem;
+    padding-top: 2rem;
+}
+
+
+.servicescarddiv button{
+    padding: 0.7rem 3rem;
+    background-color: var(--mainyellowcolor);
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.maincarcatergoressection{
+    background-color: #1D1D1D;
+    padding-block: 5rem;
+}
+
+.maincarcatergoressection h1{
+    color: #fff;
+    font-size: 4rem;
+    text-align: center
+}
+
+.yellowcardiv{
+    text-align: center;
+    background-color: #1D1D1D;
+}
+
+.yellowcardiv img{
+    width: 100%;
+    height: 100vh;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+}
+
+
+.yellowcardiv h1{
+    color: #fff;
+    font-size: 3rem;
+    padding-block: 2rem;
+}
+
+.yellowcardiv p{
+    color: #ffff;
+    font-size: 1.5rem;
+    padding-inline: 4rem;
+    padding-bottom: 5rem;
+}
+
+
+
+@media screen and (max-width:600px) {
+    
+.buyacarimg img{
+    width: 300px;
+    margin-top: 5rem;
+}
+
+.mainbuyacar{
+    height: auto;
+}
+}

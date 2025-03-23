@@ -1,9 +1,17 @@
 import React from "react";
 import "./SignUp.css";
-
+import { useNavigate } from 'react-router-dom';
 import googleimg from "../../Assets/img/google.svg";
 
 export default function SignUp() {
+
+  const navigate = useNavigate();
+
+
+  const gotheloginpage = () => {
+    navigate('/login')
+  }
+
   return (
     <div>
 
@@ -11,7 +19,7 @@ export default function SignUp() {
 
         
       <div className="alreadyaccountline">
-        <p> Already have an account? <span>Login</span></p>
+        <p> Already have an account? <span onClick={gotheloginpage}  >Login</span></p>
       </div>
 
 

@@ -1,0 +1,36 @@
+
+
+.headerbg{
+    position: relative;
+    background-image: url('../../Assets/img/maincarbg.svg');
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headercontent{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+
+.headercontent h1 {
+    font-size: 5rem;
+    color: #ffffff; /* Make sure it's pure white */
+  }
+  
+  .headercontent p {
+    font-size: 1.8rem;
+    color: #ffffff; /* Change this to white too if you want visibility */
+    padding-block: 2rem;
+    width: 60%;
+    margin: auto;
+    line-height: 3rem;
+  }

@@ -1,8 +1,59 @@
-import React from 'react'
-import './Login.css'
+import React from "react";
 
-export default function Login() {
+import { useNavigate } from 'react-router-dom';
+import googleimg from "../../Assets/img/google.svg";
+
+export default function SignUp() {
+
+  const navigate = useNavigate();
+
+
+  const gotheloginpage = () => {
+    navigate('/signup')
+  }
+
   return (
-    <div>Login</div>
-  )
+    <div>
+
+      <div className="signupbgdiv">
+
+        
+      <div className="alreadyaccountline">
+        <p> Already have an account? <span onClick={gotheloginpage}  >Sign up</span></p>
+      </div>
+
+
+        <div className="mainflexsignupdiv">
+          <div className="welcomecontent">
+            <h1>
+              Welcome! To <span>Car Show Room</span>{" "}
+            </h1>
+            <p>My Amazing Lorem ipsum dolor sit amet. Cars you can see</p>
+          </div>
+
+          <div className="signcontent">
+            <h2>Login</h2>
+            <p>Let’s Create Your Account to Join Us!</p>
+
+            <input type="text" placeholder="Enter Email" />
+            <input type="password" placeholder="Enter Password" />
+        
+            <div className="checkboxandp">
+              <input type="checkbox" className="checke" name="" id="" />
+              <p> remember me</p>
+            </div>
+
+            <button>Login</button>
+
+            <h6>OR</h6>
+
+            <button className="googlebtnandtext">
+              <img src={googleimg} alt="" />
+              <p>Continue With Google</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -1,0 +1,36 @@
+
+
+.sellacardiv{
+    background: #2E2B2B;
+    padding: 2rem;
+    width: 400px;
+    height: fit-content;
+}
+
+.sellacardiv p{
+    font-size: 1.4rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.sellacardiv input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ffff;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.7rem;
+}
+
+.sellacardiv textarea{
+    height: 100px;
+    width: 100%;
+    padding-top:0.3rem;
+    border: 1px solid #ffff;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    text-indent: 1rem;
+    background-color: transparent;
+}

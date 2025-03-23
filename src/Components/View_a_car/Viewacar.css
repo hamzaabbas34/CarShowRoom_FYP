@@ -1,0 +1,110 @@
+
+
+.carviewdiv{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: space-between;
+    padding-inline: 6rem;
+    padding-block: 4rem;
+}
+
+.whiteyellow{
+    position: relative;
+}
+
+.whiteyellow >  img{
+    width: 600px;
+    z-index: 2;
+    position: relative;
+
+}
+
+
+.yelblowcolorbg{
+    position: absolute;
+    top: 20px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    right: 20px;
+    border-radius: 5px;
+    background-color: var(--mainyellowcolor);
+}
+
+
+.whitecarviewdiv button{
+    background-color: transparent;
+    border: 1px solid var(--mainyellowcolor);
+    padding: 1rem 2rem;
+    outline: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #ffff;
+    border-radius: 6px;
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.whitecarviewdiv button:hover{
+    background-color: var(--mainyellowcolor);
+    color: black;
+}
+
+
+.smallimgdivf{
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.smallimgdivf img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+.mainflexviewcardiv{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    background-color: #252424;
+    height: fit-content;
+    padding: 5rem;
+}
+
+
+.carviewdataflex{
+    display: flex;
+    gap: 4rem;
+}
+
+.lineyellowcar{
+    border-left: 4px solid var(--mainyellowcolor);
+    height:45px;
+    padding-right: 2rem;
+}
+
+
+
+
+  
+@media screen and (max-width: 800px) {
+    .whiteyellow > img {
+        width: 300px;
+    }
+
+    .mainflexviewcardiv{
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .carviewdiv {
+        padding-left: 4rem;
+    }
+}

@@ -6,12 +6,30 @@ import logo from "../../../Assets/img/logo.svg";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 
+
+
+import { useNavigate } from 'react-router-dom';
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   let clickthemenu = () => {
     setOpen(!open);
   };
+
+
+    const navigate = useNavigate();
+
+
+    const gotheloginpage = () => {
+      navigate('/login')
+    }
+  
+  
+    // const gothebuyacarpage = () => {
+    //   navigate('/buyacar')
+    // }
+  
 
   return (
     <div>
@@ -26,10 +44,10 @@ export default function Navbar() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">Buy a car</a>
+              <a href="/buyacar">Buy a car</a>
             </li>
             <li>
-              <a href="/">Sell a car</a>
+              <a href="/sellacar">Sell a car</a>
             </li>
             <li>
               <a href="/">Rent a car</a>
@@ -37,8 +55,8 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="loginbtndiv">
-          <button>Login</button>
+        <div   className="loginbtndiv">
+          <button onClick={gotheloginpage} >Login</button>
         </div>
 
         <button onClick={clickthemenu} className="menu">
