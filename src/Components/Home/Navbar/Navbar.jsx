@@ -50,7 +50,7 @@ export default function Navbar() {
               <a href="/sellacar">Sell a car</a>
             </li>
             <li>
-              <a href="/">Rent a car</a>
+              <a href="/rentacar">Rent a car</a>
             </li>
           </ul>
         </div>

@@ -14,7 +14,7 @@
 
 .signupbgdiv{
     background-image: linear-gradient(#00000079 , #0000008e ) , url('../../Assets/img/maincarbg.svg');
-    height: 100vh;
+    
     background-size: cover;
 }
 
@@ -137,3 +137,15 @@ s
         padding: 1rem;
     }
 }
+
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: flex
+;
+    text-align: left !important;
+    width: 100%;
+  }
+  

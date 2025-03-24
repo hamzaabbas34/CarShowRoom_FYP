@@ -10,6 +10,7 @@ import SignUp from './Components/SignUp/SignUp';
 import Buyacar from './Components/Buy_a_car/Buyacar';
 import Viewacar from './Components/View_a_car/Viewacar';
 import Sellacar from './Components/Sell_a_car/Sellacar';
+import Rentacar from './Components/Rent_a_car/Rentacar';
 
 
 
@@ -24,6 +25,7 @@ export default function App() {
                 <Route path='/buyacar' element={<Buyacar />} /> 
                 <Route path='/viewacar' element={<Viewacar />} /> 
                 <Route path='/sellacar' element={<Sellacar />} /> 
+                <Route path='/rentacar' element={<Rentacar />} /> 
               </Routes>
             </Router>
     </div>

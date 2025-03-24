@@ -1,32 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignUp.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import googleimg from "../../Assets/img/google.svg";
 
 export default function SignUp() {
-
   const navigate = useNavigate();
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    remember: false,
+  });
+
+  const [errors, setErrors] = useState({});
 
   const gotheloginpage = () => {
-    navigate('/login')
-  }
+    navigate("/login");
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = "Invalid email address";
+    }
+
+    if (!formData.password) {
+      newErrors.password = "Password is required";
+    } else if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+
+    if (!formData.confirmPassword) {
+      newErrors.confirmPassword = "Confirm password is required";
+    } else if (formData.confirmPassword !== formData.password) {
+      newErrors.confirmPassword = "Passwords do not match";
+    }
+
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      // Submit the form data
+      console.log("Form submitted:", formData);
+      // navigate('/somewhere') if needed
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
 
   return (
     <div>
-
       <div className="signupbgdiv">
+        <div className="alreadyaccountline">
+          <p>
+            Already have an account? <span onClick={gotheloginpage}>Login</span>
+          </p>
+        </div>
 
-        
-      <div className="alreadyaccountline">
-        <p> Already have an account? <span onClick={gotheloginpage}  >Login</span></p>
-      </div>
-
-
-        <div className="mainflexsignupdiv">
+        <form className="mainflexsignupdiv" onSubmit={handleSubmit}>
           <div className="welcomecontent">
             <h1>
-              Welcome! To <span>Car Show Room</span>{" "}
+              Welcome! To <span>Car Show Room</span>
             </h1>
             <p>My Amazing Lorem ipsum dolor sit amet. Cars you can see</p>
           </div>
@@ -35,25 +91,67 @@ export default function SignUp() {
             <h2>Sign Up</h2>
             <p>Let’s Create Your Account to Join Us!</p>
 
-            <input type="text" placeholder="Enter Name" />
-            <input type="text" placeholder="Enter Email" />
-            <input type="password" placeholder="Enter Password" />
-            <input type="password" placeholder="Enter Confirm password" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            {errors.name && <span className="error">{errors.name}</span>}
+
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && <span className="error">{errors.email}</span>}
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            {errors.password && (
+              <span className="error">{errors.password}</span>
+            )}
+
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Enter Confirm Password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+            />
+            {errors.confirmPassword && (
+              <span className="error">{errors.confirmPassword}</span>
+            )}
+
             <div className="checkboxandp">
-              <input type="checkbox" className="checke" name="" id="" />
-              <p> remember me</p>
+              <input
+                type="checkbox"
+                className="checke"
+                name="remember"
+                checked={formData.remember}
+                onChange={handleChange}
+              />
+              <p>Remember me</p>
             </div>
 
-            <button>Sign Up</button>
+            <button type="submit">Sign Up</button>
 
             <h6>OR</h6>
 
-            <button className="googlebtnandtext">
+            <button type="button" className="googlebtnandtext">
               <img src={googleimg} alt="" />
               <p>Continue With Google</p>
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

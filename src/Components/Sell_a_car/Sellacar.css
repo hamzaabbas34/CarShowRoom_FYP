@@ -34,3 +34,105 @@
     text-indent: 1rem;
     background-color: transparent;
 }
+
+.whiteyellow{
+    position: relative;
+    z-index: 4;
+}
+
+.whiteyellow input{
+    padding: 3rem;
+    z-index: 5;
+    position: relative;
+    border: 1px solid red;
+    background-color: #2E2B2B;
+    height: 200px;
+}
+
+
+.buycontent h3{
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.teamimg{
+    width: 50%;
+}
+
+.teamimg img{
+    width: 400px;
+}
+
+.picandclientreviewmaindiv{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.picandclientreviewmaindiv img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-top: 1rem;
+}
+
+.teamdiv{
+    background-color: black;
+    padding: 3rem;
+    color: #fff;
+    border: 1px solid var(--mainyellowcolor);
+}
+
+.teamdiv span{
+    font-size: 1.4rem;
+    padding-block: 1rem;
+}
+
+.mainflexclientreviewdiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+    background-color: #2E2B2B;
+}
+
+.teamdivmain{
+    width: 50%;
+}
+
+.teamdivmain h1{
+    font-size: 4rem;
+    color: #fff;
+}
+
+.teamdivmain p{
+    font-size: 1.6rem;
+    color: #fff;
+    padding-block: 1rem;
+}
+
+
+.slider-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .slider-buttons button {
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--mainyellowcolor);
+    color: #000;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .slider-buttons button:hover {
+    background-color: #ffd700;
+  }
+  
